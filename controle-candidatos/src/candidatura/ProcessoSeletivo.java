@@ -9,15 +9,15 @@ public class ProcessoSeletivo {
         String[] candidatos = {"Felipe", "Marcia", "Julia", "Paulo", "Augusto", "Monica", "Fabricio", "Mirela",
                 "Daniela", "Jorge"};
 
-
         System.out.println("\n----------------Seletiva-----------------------");
         ArrayList selecionados = selecaoCandidatos(candidatos);
+
         System.out.println("\n----------------Imprimindo---------------------");
         imprimirSelecionados(selecionados);
 
-
-        for (String candidato: candidatos){
-            entrandoEmContato(candidato);
+        System.out.println("\n------------Entrando em contato----------------");
+        for (Object candidato: selecionados){
+            entrandoEmContato((String) candidato);
         }
 
 //        analisarCandidato(1900.0);
